@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="overlay_button_window_size">64dp</dimen>
+    <dimen name="overlay_button_size">48dp</dimen>
+    <dimen name="bubble_max_width">290dp</dimen>
+    <dimen name="bubble_padding">16dp</dimen>
+    <dimen name="bubble_corner_radius">16dp</dimen>
+    <dimen name="bubble_margin">8dp</dimen>
+    <dimen name="input_panel_width">320dp</dimen>
+    <dimen name="dismiss_target_size">64dp</dimen>
+    <dimen name="dismiss_target_size_hover">76dp</dimen>
+</resources>

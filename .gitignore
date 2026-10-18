@@ -1,0 +1,54 @@
+# API keys and secrets
+.env
+*.env
+!.env.example
+
+# Python
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.venv/
+venv/
+env/
+*.egg-info/
+dist/
+build/
+
+# Android
+android/.gradle/
+android/build/
+android/app/build/
+android/local.properties
+android/captures/
+android/.idea/
+*.iml
+*.hprof
+
+# Screenshots - never commit real screenshots
+*.png
+*.jpg
+*.jpeg
+!android/app/src/main/res/**/*.png
+!android/app/src/main/res/**/*.xml
+!backend/tests/synthetic/*.png
+!docs/*.png
+
+# IDE
+.idea/
+.vscode/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Gradle
+.gradle/
+gradle-app.setting
+!gradle-wrapper.jar
+
+# Logs
+*.log

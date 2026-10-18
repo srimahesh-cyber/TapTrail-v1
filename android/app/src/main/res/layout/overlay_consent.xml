@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/consentContainer"
+    android:layout_width="320dp"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bubble_background"
+    android:padding="20dp"
+    android:elevation="14dp">
+
+    <TextView
+        android:id="@+id/tvConsentTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/consent_title"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/taptrail_on_surface"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:id="@+id/tvConsentBody"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/consent_body"
+        android:textSize="13sp"
+        android:lineSpacingExtra="3dp"
+        android:textColor="@color/taptrail_on_surface"
+        android:layout_marginBottom="20dp" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <Button
+            android:id="@+id/btnConsentAgree"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:text="@string/consent_agree"
+            android:textColor="@android:color/white"
+            android:backgroundTint="@color/taptrail_primary"
+            android:layout_marginBottom="8dp" />
+
+        <Button
+            android:id="@+id/btnConsentCancel"
+            android:layout_width="match_parent"
+            android:layout_height="44dp"
+            android:text="@string/cancel"
+            android:textColor="@color/taptrail_on_surface_secondary"
+            android:background="?android:attr/selectableItemBackground" />
+    </LinearLayout>
+
+</LinearLayout>

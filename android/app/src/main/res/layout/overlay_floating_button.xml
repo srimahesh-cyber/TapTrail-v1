@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/floatingButtonContainer"
+    android:layout_width="@dimen/overlay_button_window_size"
+    android:layout_height="@dimen/overlay_button_window_size"
+    android:clipChildren="false"
+    android:clipToPadding="false">
+
+    <!-- Pulsing Beacon Ring -->
+    <View
+        android:id="@+id/viewPulseRing"
+        android:layout_width="@dimen/overlay_button_size"
+        android:layout_height="@dimen/overlay_button_size"
+        android:layout_gravity="center"
+        android:background="@drawable/pulse_ring_background"
+        android:alpha="0"
+        android:scaleX="1.0"
+        android:scaleY="1.0" />
+
+    <!-- Actual Floating Button -->
+    <FrameLayout
+        android:id="@+id/innerFloatingButton"
+        android:layout_width="@dimen/overlay_button_size"
+        android:layout_height="@dimen/overlay_button_size"
+        android:layout_gravity="center"
+        android:background="@drawable/button_background"
+        android:elevation="8dp">
+
+        <ImageView
+            android:id="@+id/ivFloatingIcon"
+            android:layout_width="26dp"
+            android:layout_height="26dp"
+            android:layout_gravity="center"
+            android:src="@drawable/ic_taptrail"
+            android:contentDescription="@string/app_name" />
+
+        <ProgressBar
+            android:id="@+id/pbLoading"
+            android:layout_width="30dp"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:visibility="gone"
+            android:indeterminateTint="@color/taptrail_button_icon" />
+    </FrameLayout>
+
+</FrameLayout>

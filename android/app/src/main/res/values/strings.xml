@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">TapTrail</string>
+    <string name="start_taptrail">Start TapTrail</string>
+    <string name="stop_taptrail">Stop TapTrail</string>
+    <string name="overlay_permission_needed">TapTrail needs permission to display over other apps</string>
+    <string name="grant_overlay_permission">Grant Overlay Permission</string>
+    <string name="overlay_active">TapTrail is active. Tap the floating button for help.</string>
+    <string name="how_can_i_help">How can I help with this screen?</string>
+    <string name="hint_enter_request">Ask anything in any app (e.g., search, play, order, toggle)...</string>
+    <string name="ask">Ask</string>
+    <string name="cancel">Cancel</string>
+    <string name="next_step">Next Step</string>
+    <string name="stop">Stop</string>
+    <string name="close">Close</string>
+    <string name="retry">Retry</string>
+    <string name="consent_title">Screen Content Transmission</string>
+    <string name="consent_body">TapTrail will capture a screenshot of your current screen.\n\nThe screenshot and your request will be sent to:\n• TapTrail\'s backend server (developer\'s laptop)\n• Google\'s Gemma API for analysis\n\nGoogle may retain and review data sent through the free API tier. TapTrail does not store screenshots.\n\nDo you want to proceed?</string>
+    <string name="consent_agree">I Understand, Proceed</string>
+    <string name="analyzing">Analyzing screen…</string>
+    <string name="error_network">Could not reach the backend. Check your connection.</string>
+    <string name="error_api">The AI service encountered an error.</string>
+    <string name="error_timeout">Request timed out. Try again?</string>
+    <string name="error_invalid_response">Received an unclear response. Try again?</string>
+    <string name="task_complete">Task complete!</string>
+    <string name="notification_channel_name">TapTrail Overlay</string>
+    <string name="notification_title">TapTrail is running</string>
+    <string name="notification_text">Tap to open TapTrail</string>
+    <string name="fallback_notice">⚠ This is a precomputed response, not live AI inference.</string>
+    <string name="open_settings">Open Android Settings</string>
+    <string name="chip_hotspot">Turn on Hotspot</string>
+    <string name="chip_dark_theme">Enable Dark Theme</string>
+    <string name="chip_battery_saver">Turn on Battery Saver</string>
+    <string name="chip_bluetooth">Pair Bluetooth Device</string>
+    <string name="quick_suggestions">Quick suggestions:</string>
+    <string name="dismiss_target">Drag here to close</string>
+    <string name="step_counter">Step %1$d</string>
+</resources>

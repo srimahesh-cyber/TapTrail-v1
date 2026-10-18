@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/instructionBubbleContainer"
+    android:layout_width="@dimen/bubble_max_width"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@drawable/bubble_background"
+    android:padding="14dp"
+    android:elevation="10dp">
+
+    <!-- Collapsed Compact Bar (shown when minimized) -->
+    <LinearLayout
+        android:id="@+id/layoutCollapsedBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:visibility="gone">
+
+        <TextView
+            android:id="@+id/tvCollapsedLabel"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Step 1: Next Action ▾"
+            android:textSize="12sp"
+            android:textStyle="bold"
+            android:textColor="@color/taptrail_primary" />
+
+        <ImageButton
+            android:id="@+id/btnExpandBubble"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:background="?android:attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/arrow_down_float"
+            android:tint="@color/taptrail_primary"
+            android:contentDescription="Expand" />
+    </LinearLayout>
+
+    <!-- Expanded Card Content -->
+    <LinearLayout
+        android:id="@+id/layoutExpandedContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Header with Step Badge, Label, Minimize, and Close -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical"
+            android:layout_marginBottom="8dp">
+
+            <TextView
+                android:id="@+id/tvStepBadge"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="STEP 1"
+                android:textSize="10sp"
+                android:textStyle="bold"
+                android:textColor="@color/taptrail_primary"
+                android:background="@drawable/step_badge_background"
+                android:paddingHorizontal="7dp"
+                android:paddingVertical="3dp"
+                android:layout_marginEnd="8dp" />
+
+            <TextView
+                android:id="@+id/tvStepLabel"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="TapTrail Guidance"
+                android:textSize="13sp"
+                android:textStyle="bold"
+                android:textColor="@color/taptrail_on_surface"
+                android:ellipsize="end"
+                android:maxLines="1" />
+
+            <ImageButton
+                android:id="@+id/btnMinimizeBubble"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/arrow_up_float"
+                android:tint="@color/taptrail_on_surface_secondary"
+                android:contentDescription="Minimize"
+                android:layout_marginEnd="4dp" />
+
+            <ImageButton
+                android:id="@+id/btnCloseBubble"
+                android:layout_width="26dp"
+                android:layout_height="26dp"
+                android:background="?android:attr/selectableItemBackgroundBorderless"
+                android:src="@android:drawable/ic_menu_close_clear_cancel"
+                android:tint="@color/taptrail_on_surface_secondary"
+                android:contentDescription="@string/close" />
+        </LinearLayout>
+
+        <!-- Fallback Notice Badge -->
+        <TextView
+            android:id="@+id/tvFallbackNotice"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/fallback_notice"
+            android:textSize="11sp"
+            android:textColor="@color/taptrail_warning"
+            android:background="#FFF9C4"
+            android:paddingHorizontal="6dp"
+            android:paddingVertical="4dp"
+            android:layout_marginBottom="8dp"
+            android:visibility="gone" />
+
+        <!-- Instruction message -->
+        <TextView
+            android:id="@+id/tvInstructionMessage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:lineSpacingMultiplier="1.2"
+            android:textColor="@color/taptrail_on_surface"
+            android:layout_marginBottom="12dp" />
+
+        <!-- Progress loading bar (e.g. while analyzing) -->
+        <ProgressBar
+            android:id="@+id/pbAnalyzing"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="4dp"
+            android:indeterminate="true"
+            android:indeterminateTint="@color/taptrail_primary"
+            android:layout_marginBottom="12dp"
+            android:visibility="gone" />
+
+        <!-- Action buttons row -->
+        <LinearLayout
+            android:id="@+id/layoutActionButtons"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="end|center_vertical">
+
+            <Button
+                android:id="@+id/btnStopGuidance"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="@string/stop"
+                android:textSize="12sp"
+                android:textColor="@color/taptrail_on_surface_secondary"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingHorizontal="12dp"
+                android:layout_marginEnd="6dp" />
+
+            <Button
+                android:id="@+id/btnRetryGuidance"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="@string/retry"
+                android:textSize="12sp"
+                android:textColor="@color/taptrail_primary"
+                android:background="?android:attr/selectableItemBackground"
+                android:paddingHorizontal="12dp"
+                android:layout_marginEnd="6dp"
+                android:visibility="gone" />
+
+            <Button
+                android:id="@+id/btnNextStep"
+                android:layout_width="wrap_content"
+                android:layout_height="36dp"
+                android:text="Next Step →"
+                android:textSize="12sp"
+                android:textStyle="bold"
+                android:textColor="@android:color/white"
+                android:background="@drawable/btn_pill_primary"
+                android:paddingHorizontal="16dp" />
+        </LinearLayout>
+
+    </LinearLayout>
+
+</LinearLayout>
